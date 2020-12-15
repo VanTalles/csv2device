@@ -1,0 +1,3 @@
+name;model;vlan;ip
+kl-n-test.ao.nlmk;WS-C2960X-48TS-L;100;10.10.1.1
+kl-n-test01.ao.nlmk;WS-C2960X-48TS-L;100;10.10.1.2
