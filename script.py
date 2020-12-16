@@ -19,9 +19,9 @@ def getList4CSV(csv_file):
 NB_URL = '******************'
 NB_TOKEN = '******************'
 
-TENANT = 2
-SITE = 50
-DEVICE_ROLE = 2
+TENANT = 2      # test
+SITE = 50       # test
+DEVICE_ROLE = 2 # test
 
 nb = pynetbox.api(NB_URL, token = NB_TOKEN)
 
@@ -49,7 +49,7 @@ for dev in dl:
         dev_int_new = nb.dcim.interfaces.create(item_interface)
         item_ip = dict (
             family = 4,
-            address = dev["ip"]+'/24',
+            address = dev["ip"]+'/24',          # use correct mask
             tenant = TENANT,
             status = 'active',
             assigned_object_id = dev_int_new.id,
