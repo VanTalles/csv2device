@@ -53,10 +53,10 @@ for dev in dl:
             tenant = TENANT,
             status = 'active',
             interface = dev_int_new.id,
-            dev_new.primary_ip4 = iip
-            dev_new.save()
+            
         )
         iip = nb.ipam.ip_addresses.create(item_ip)
-        
+        dev_new.primary_ip4 = iip
+        dev_new.save()
     else:
         print (f'Not found device type with slug {model_slug}')
